@@ -1,0 +1,135 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fc;
+  margin: 0;
+  padding: 40px;
+}
+
+.chat-section {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+h2 {
+  color: #213a87;
+  text-align: center;
+}
+
+.chat-window {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  background: #213a87;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.message {
+  margin: 10px 0;
+}
+
+.bot {
+  color: #213a87;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* En styles/stylechatbot.css o stylebase.css */
+.floating-feedback-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-purple);
+    color: white;
+    padding: 10px; /* Reducido para un look más compacto */
+    border-radius: 50px; /* Para hacerlo más circular si solo es icono, o píldora con texto */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-feedback-button svg {
+    margin-right: 8px; /* Espacio si hay texto */
+}
+.floating-feedback-button span {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+.floating-feedback-button:hover {
+    background-color: var(--hover-purple);
+    transform: scale(1.05);
+}
+
+/* Si quieres que el texto solo aparezca en hover (más minimalista) */
+/*
+.floating-feedback-button span {
+    display: none;
+    margin-left: 8px;
+}
+.floating-feedback-button:hover span {
+    display: inline;
+}
+.floating-feedback-button svg { // Ajuste si el texto está oculto inicialmente
+    margin-right: 0;
+}
+.floating-feedback-button:hover svg {
+    margin-right: 8px;
+}
+.floating-feedback-button { // Ajuste de padding si el texto está oculto
+    padding: 15px;
+}
+.floating-feedback-button:hover {
+    padding: 10px 15px;
+}
+*/
+
+@media (max-width: 600px) {
+    .floating-feedback-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px; /* Un poco más grande para tocar fácil en móvil si es solo icono */
+    }
+    .floating-feedback-button span {
+        display: none; /* Ocultar texto en móviles para ahorrar espacio */
+    }
+    .floating-feedback-button svg {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,129 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fc;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+.feedback-container {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  animation: appearSmooth 0.8s ease;
+}
+
+h2 {
+  text-align: center;
+  color: #213a87;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #213a87;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a2f6d;
+}
+
+#feedbackStatus {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes appearSmooth {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--secondary-blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 140px;
+}
+
+.back-button:hover {
+    background-color: var(--primary-purple);
+    transform: translateY(-2px);
+}
+
+.back-button svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+@media (max-width: 768px) {
+    .floating-button-container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .floating-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8em;
+    }
+
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}

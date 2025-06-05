@@ -1,0 +1,128 @@
+/* styles/stylebase.css */
+:root {
+    --primary-purple: #6A0DAD;
+    --secondary-blue: #007BFF;
+    --dark-bg: #1A1A2E;
+    --container-bg: #2C2C54;
+    --input-bg: #252540;
+    --light-text: #E0E0E0;
+    --hover-purple: #8E44AD;
+    --hover-blue: #2980B9;
+    --border-color: #4A0072; /* Un morado más oscuro para bordes */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-container { /* Usaremos esta clase en login, feedback, aggsolucion, dashboard */
+    background-color: var(--container-bg);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 500px; /* Ajusta según la página */
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--primary-purple);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--secondary-blue);
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--secondary-blue);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--light-text);
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.3);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button[type="submit"], .button-style { /* .button-style para otros botones */
+    background-color: var(--secondary-blue);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover, .button-style:hover {
+    background-color: var(--hover-blue);
+}
+
+p#loginMessage, p#feedbackStatus, p#statusMessage { /* Mensajes de estado */
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para select (desplegable) */
+select {
+    appearance: none; /* Quita el estilo por defecto del navegador */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.4-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px auto;
+}
+
+select option {
+    background-color: var(--input-bg);
+    color: var(--light-text);
+}
+
+/* Responsividad básica */
+@media (max-width: 600px) {
+    .main-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}

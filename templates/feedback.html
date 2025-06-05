@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback del Usuario</title>
+  <link rel="stylesheet" href="../styles/stylebase.css" />
+  <link rel="stylesheet" href="../styles/stylefeedback.css" />
+</head>
+<body>
+  <button class="back-button" onclick="history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+        Regresar
+    </button>
+    
+  <div class="main-container feedback-container">
+    <h2>Tu Opinión es Importante</h2>
+    <form onsubmit="return enviarFeedback(event)">
+      <label for="satisfaccion">¿Qué tan útil fue la respuesta?</label>
+      <select id="satisfaccion" required>
+        <option value="">Selecciona una opción</option>
+        <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+        <option value="4">⭐⭐⭐⭐ Buena</option>
+        <option value="3">⭐⭐⭐ Regular</option>
+        <option value="2">⭐⭐ Mala</option>
+        <option value="1">⭐ Muy mala</option>
+      </select>
+
+      <label for="comentario">Comentarios adicionales</label>
+      <textarea id="comentario" placeholder="Déjanos saber cómo podemos mejorar..."></textarea>
+
+      <button type="submit">Enviar Opinión</button>
+    </form>
+    <p id="feedbackStatus"></p>
+  </div>
+  <script src="../scripts/scriptfeedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droopy Chatbot</title>
+    <link rel="stylesheet" href="styles/stylebot.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="droopy-area">
+            <div id="thinking-bubble" class="thinking-bubble">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
+                    <circle cx="30" cy="40" r="10" fill="white"/>
+                    <circle cx="50" cy="30" r="15" fill="white"/>
+                    <circle cx="70" cy="45" r="8" fill="white"/>
+                    <path d="M 50 60 Q 40 70 30 80 Q 20 70 20 60 Q 30 50 50 60 Z" fill="white" opacity="0.8"/>
+                </svg>
+            </div>
+            <div class="droopy-character" id="droopyCharacter">
+                <img src="img/v915-wit-011-d.jpg" alt="Droopy Dog" id="droopyBaseImage">
+
+                <div class="eye" id="left-eye">
+                    <div class="pupil" id="left-pupil"></div>
+                </div>
+                <div class="eye" id="right-eye">
+                    <div class="pupil" id="right-pupil"></div>
+                </div>
+
+                <div id="droopyExpression" class="droopy-expression-overlay">Neutral</div>
+            </div>
+        </div>
+
+        <div class="dialogue-area">
+            <div class="droopy-speech-bubble" id="droopySpeechBubble">
+                <p id="droopyText"></p>
+            </div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí...">
+                <button id="sendButton">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-button-container">
+        <div class="sub-buttons-wrapper" id="subButtonsWrapper">
+            <a href="templates/aggsolucion.html" class="sub-button" title="Ir a Template 1">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/><path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </a>
+            <a href="templates/dashboard.html" class="sub-button" title="Ir a Template 2">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/><path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </a>
+            <a href="templates/feedback.html" class="sub-button" title="Ir a Template 3">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </a>
+        </div>
+        <button class="floating-button" id="mainFloatingButton">
+            +
+        </button>
+    </div>
+
+    <button class="back-button" onclick="history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+        Regresar
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

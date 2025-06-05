@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Soporte Técnico</title>
+  <link rel="stylesheet" href="../styles/stylebase.css" />
+  <link rel="stylesheet" href="../styles/stylelogin.css" />
+</head>
+<body>
+  <div class="main-container login-container">
+    <h2>ChatBot de Soporte Técnico</h2>
+    <form onsubmit="return loginUser(event)">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" placeholder="Ingresa tu usuario" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Ingresa tu contraseña" required />
+
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p id="loginMessage"></p>
+  </div>
+  <script src="../scripts/scriptlogin.js"></script>
+</body>
+</html>

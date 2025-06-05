@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agregar Solución</title>
+  <link rel="stylesheet" href="../styles/stylebase.css" />
+  <link rel="stylesheet" href="../styles/styleagg.css" />
+</head>
+<body>
+  <button class="back-button" onclick="history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+        Regresar
+    </button>
+    
+  <div class="main-container form-container"> <h2>Registrar Nueva Solución</h2>
+    <form onsubmit="return guardarSolucion(event)">
+      <label for="problema">Problema Detectado</label>
+      <input type="text" id="problema" placeholder="Ej. No imprime en red" required />
+
+      <label for="solucion">Solución Aplicada</label>
+      <textarea id="solucion" placeholder="Describe detalladamente los pasos..." required></textarea>
+
+      <button type="submit">Guardar Solución</button>
+    </form>
+    <p id="statusMessage"></p>
+  </div>
+  <script src="../scripts/scriptagg.js"></script>
+</body>
+</html>
